@@ -1,0 +1,94 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eaf4f2; /* verde claro que evoca la selva */
+    color: #2a3d2f; /* verde oscuro */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #1b4d3e;
+    text-shadow: 1px 1px 3px #a6c1b3;
+}
+
+/* Contenedor principal */
+.padre {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Contenedor de cada plato */
+.hijo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Cada sección de plato */
+.nieto {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.12);
+    padding: 20px;
+    flex: 1 1 300px;
+    max-width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nieto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+}
+
+/* Títulos de los platos */
+.nieto h2 {
+    color: #1a422f;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Imágenes */
+.nieto img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    height: 180px;
+}
+
+/* Listas */
+.nieto ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+.nieto ul li {
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hijo {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nieto {
+        max-width: 90%;
+    }
+}
